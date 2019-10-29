@@ -8,6 +8,9 @@
 
 # App node_modules to be ignored.
 /app/node_modules/
+app/build/
+app/public/
+yarn.lock
 
 # Terraform files to be ignored.
 .terraform/.terraform/
