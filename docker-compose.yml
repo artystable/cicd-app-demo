@@ -1,0 +1,27 @@
+
+## To build the docker image, go to the ./images dir and run the following command:
+# docker build -t cicd-app-demo/cicd-app-demo .
+
+## To run the image and begin using it, from this root directory, run:
+# docker-compose run cicd-app-demo bash
+
+version: '3.1'
+
+services:
+  cicd-app-demo:
+    container_name: CICD-App-Demo
+    image: cicd-app-demo/cicd-app-demo
+    restart: always
+    volumes:
+      - ./:/cicd-app-dev-env
+    environment:
+      - TF_VAR_S3_BUCKET_NAME=${S3_BUCKET_NAME}
+      - TF_VAR_S3_BUCKET_URL=${S3_BUCKET_URL}
+      - TF_VAR_ACCESS_KEY=${ACCESS_KEY}
+      - TF_VAR_SECRET_KEY=${SECRET_KEY}
+      - TF_VAR_REGION=${REGION}
+      - TF_VAR_PRINCIPAL_AWS_RESOURCE_ARN=${PRINCIPAL_AWS_RESOURCE_ARN}
+      - CIRCLECI_CLI_TOKEN=${CIRCLECI_CLI_TOKEN}
+      - CIRCLECI_CLI_HOST=${CIRCLECI_CLI_HOST}
+    ports:
+      - 8080:3000

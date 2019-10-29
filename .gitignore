@@ -1,0 +1,21 @@
+# Key files where personal/private data is kept should remain hidden.
+.env
+
+# In a similar way, files that can be regenerated from within the project itself are also removed to keep the repository light and focused on what matters.
+
+# The repository itself to be ignored.
+.git/
+
+# App node_modules to be ignored.
+/app/node_modules/
+
+# Terraform files to be ignored.
+.terraform/.terraform/
+.terraform/terraform.tfstate
+.terraform/terraform.tfstate
+
+# Log files need not be present in the public production repo.
+*.log
+
+# Files within a "private" directory should be kept outside of the git history by default. Such directory can be used to store personal notes about the project and any other information you do not fundamentally need to share publicly about the project.
+private/
