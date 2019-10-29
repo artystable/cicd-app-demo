@@ -31,3 +31,10 @@ To validate your CircleCI config to ensure it is useable. In the root of your pr
 ](https://circleci.com/docs/2.0/local-cli-getting-started/#section=getting-started) and [Using the CircleCI Local CLI](https://circleci.com/docs/2.0/local-cli/) documentation published by CircleCI.
 
 Note that CircleCI's CLI tool requires Docker to execute most advanced commands. Since this project is setup to use Docker as a dev environment, CircleCI's CLI docker feature can be a bit limiting since using the CLI tool imediately leads to issues about Running Docker within Docker. There are two easy and simple solutions to this, however. Solution #1: Download CircleCI CLI to your host machine (where you should also have Docker installed) and use Circle CI CLI from your host machine. Solution #2: Use the CircleCI website to manage jobs, workflows, etc. I am sure further solutions could be created, but that is beyond the scope of this project.
+
+## Working With Create React App
+
+The app sits at the ./app directory once the docker-compose command is ran to boot up the development environment. Change directories to enter the /app directory and then use the following commands to begin the app development workflow:
+`yarn install` - Gets yarn to install all dependencies listed in the package.json file so the app can work.
+`yarn build` - Yarn builds the app in the /app/build directory.
+`yarn start` - Starts the react-script server on port 3000.

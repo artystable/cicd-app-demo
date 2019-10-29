@@ -9,18 +9,13 @@ import List from '@material-ui/core/List';
 import Typography from '@material-ui/core/Typography';
 import Divider from '@material-ui/core/Divider';
 import IconButton from '@material-ui/core/IconButton';
-import Badge from '@material-ui/core/Badge';
 import Container from '@material-ui/core/Container';
 import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import Link from '@material-ui/core/Link';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
-import NotificationsIcon from '@material-ui/icons/Notifications';
-import { mainListItems, secondaryListItems } from './listItems';
-import Chart from './Chart';
-import Deposits from './Deposits';
-import Orders from './Orders';
+import { mainListItems } from './listItems';
 
 import DemoMUIDataTableComponent from './MUIDataTable';
 
@@ -127,7 +122,6 @@ export default function Dashboard() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
-  const fixedHeightPaper = clsx(classes.paper, classes.fixedHeight);
 
   return (
     <div className={classes.root}>
@@ -146,13 +140,9 @@ export default function Dashboard() {
           <Typography component="h1" variant="h6" color="inherit" noWrap className={classes.title}>
             Invoice Admin
           </Typography>
-{/* 
-          <IconButton color="inherit">
-            <Badge badgeContent={4} color="secondary">
-              <NotificationsIcon />
-            </Badge>
-          </IconButton>
-*/}
+              
+              {/* Originally used for other Icons*/}
+
         </Toolbar>
       </AppBar>
       <Drawer
@@ -169,41 +159,23 @@ export default function Dashboard() {
         </div>
         <Divider />
         <List>{mainListItems}</List>
-{/* 
-        <Divider />
-        <List>{secondaryListItems}</List>
-*/}
+          
+          {/* Originally used for <Divider /> and "<List>{secondaryListItems}</List>" */}
 
       </Drawer>
       <main className={classes.content}>
         <div className={classes.appBarSpacer} />
         <Container maxWidth="lg" className={classes.container}>
           <Grid container spacing={3}>
-            {/* Chart */}
-{/* 
-            <Grid item xs={12} md={8} lg={9}>
-              <Paper className={fixedHeightPaper}>
-                <Chart />
-              </Paper>
-            </Grid>
-*/}
-            {/* Recent Deposits */}
-{/* 
-            <Grid item xs={12} md={4} lg={3}>
-              <Paper className={fixedHeightPaper}>
-                <Deposits />
-              </Paper>
-            </Grid>
-*/}
 
-            {/* Recent Orders */}
+            {/* Originally used for "Chart" and other similar components.*/}
+
             <Grid item xs={12}>
               <Paper className={classes.paper}>
 
-
                 <DemoMUIDataTableComponent />
 
-                {/* <Orders /> */}
+                {/* Originally used for "<Orders />" component." */}
 
               </Paper>
             </Grid>
