@@ -13,7 +13,8 @@ yarn.lock
 
 # Terraform files to be ignored.
 .terraform/.terraform/
-.terraform/terraform.tfstate
+terraform.tfstate
+terraform.tfstate.backup
 
 # CircleCI files to be ignored.
 .circleci/process.yml
