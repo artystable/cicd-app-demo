@@ -13,11 +13,11 @@ Change the filename to ".env" and update all relevant variables per your specifi
 The Dockerfile image builds a nice Ubuntu image with all the necessary packages to implement a basic TDD, CICD pipeline to use an AWS S3 bucket to host static files for a client-side React webapp. This project is quite modest in its starting objectives, yet from this setup it should be significantly easy to extend the CICD pipeline as well as infracstructure to meet more complex needs. specifically, transitioning to a server-sided webapp by swwapping the S3 host layer for an AWS EC2 image should be fairly straightforward while still retaining most (if not all) of the resources that make up the infracstructure of the project. Also, the simplicity of the project and the way I chose to organzie the resources should make it particularly helpful for anyone else who might be interested in learning about DevOps and/or specifically, about TDD and CICD principles.
 
 **Build:** `docker build -t artystable/cicd-app-demo .`
-**Run Container Bash Shell:** `docker-compose run cicd-app-demo bash`
+**Run Container Bash Shell:** `docker-compose run --service-ports cicd-app-demo bash`
 
 ## Terraform
 
-`cd ./cicd-app-demo/.terraform`
+`cd .terraform`
 `terraform init`
 `terraform plan`
 `terraform apply` (then confirm `yes` after prompt)
@@ -35,6 +35,7 @@ Note that CircleCI's CLI tool requires Docker to execute most advanced commands.
 ## Working With Create React App
 
 The app sits at the ./app directory once the docker-compose command is ran to boot up the development environment. Change directories to enter the /app directory and then use the following commands to begin the app development workflow:
+`cd /cicd-app-dev-env/app`
 `yarn install` - Gets yarn to install all dependencies listed in the package.json file so the app can work.
 `yarn build` - Yarn builds the app in the /app/build directory.
 `yarn start` - Starts the react-script server on port 3000.

@@ -13,7 +13,7 @@ services:
     image: cicd-app-demo/cicd-app-demo
     restart: always
     volumes:
-      - ./:/cicd-app-dev-env
+      - ../:/cicd-app-dev-env
     environment:
       - TF_VAR_S3_BUCKET_NAME=${S3_BUCKET_NAME}
       - TF_VAR_S3_BUCKET_URL=${S3_BUCKET_URL}
