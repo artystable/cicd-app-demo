@@ -13,6 +13,9 @@
 .terraform/.terraform/
 .terraform/terraform.tfstate
 
+# CircleCI files to be ignored.
+.circleci/process.yml
+
 # Log files need not be present in the public production repo.
 *.log
 

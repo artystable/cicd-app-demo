@@ -6,7 +6,7 @@ This is a project to practice several modern Software Engineering concepts and t
 
 ## .env.sample
 
-Change the filename to ".env" and update all relevant variables per your custom situation.
+Change the filename to ".env" and update all relevant variables per your specific project needs. Note that CircleCI uses the environment variables in the repo to run its jobs. This project's .gitignore file prevents the .env file to be added to your git history by default. If you make your respository private on GitHub, you should have no problems with CircleCI as it will use the variables from the .env file to run its jobs. Otherwise, you have to add any environment (.env) variables you want CircleCI jobs to use into the CircleCI project via the CircleCI web application's project configuration. And of course, there are many other alternatives, but since this is a fairly simple project and two perfectly simple and functional 
 
 ## Using Docker Image
 
