@@ -20,7 +20,7 @@ The Dockerfile image builds a nice Ubuntu image with all the necessary packages 
 `cd ./cicd-app-demo/.terraform`
 `terraform init`
 `terraform plan`
-`terraform apply`
+`terraform apply` (then confirm `yes` after prompt)
 
 ## CircleCI
 

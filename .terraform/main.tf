@@ -1,15 +1,16 @@
+
 ## This is the main Terraform config file that is used to build our infractstructure.
 
-variable "REGION" {}
-variable "ACCESS_KEY" {}
-variable "SECRET_KEY" {}
+variable "AWS_ACCESS_KEY" {}
+variable "AWS_SECRET_ACCESS_KEY" {}
+variable "AWS_DEFAULT_REGION" {}
 variable "S3_BUCKET_NAME" {}
 variable "PRINCIPAL_AWS_RESOURCE_ARN" {}
 
 provider "aws" {
-    access_key = "${var.ACCESS_KEY}"
-    secret_key = "${var.SECRET_KEY}"
-    region = "${var.REGION}"
+    access_key = "${var.AWS_ACCESS_KEY}"
+    secret_key = "${var.AWS_SECRET_ACCESS_KEY}"
+    region = "${var.AWS_DEFAULT_REGION}"
 }
 
 resource "aws_s3_bucket" "selected" {
