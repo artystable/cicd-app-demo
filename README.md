@@ -38,3 +38,7 @@ The app sits at the ./app directory once the docker-compose command is ran to bo
 `yarn install` - Gets yarn to install all dependencies listed in the package.json file so the app can work.
 `yarn build` - Yarn builds the app in the /app/build directory.
 `yarn start` - Starts the react-script server on port 3000.
+
+---
+
+Now go and make something awesome!
