@@ -29,9 +29,6 @@ ENV LC_ALL=en_US.UTF-8
 
 # Install Git.
 RUN apt install -y git
-# Add basic Git user credential data.
-RUN git config --global user.email "arturostable@gmail.com"
-RUN git config --global user.name "artystable"
 
 # Install Latest Node JS LTS Version (10) & Matching NPM.
 RUN apt install -y build-essential apt-transport-https lsb-release ca-certificates curl
