@@ -8,7 +8,7 @@ This project is ideal for a software engineer who is interested in learning abou
 
 ## Prerequisites Summary
 
-You will need to have an *AWS user* with *programmatic access* along with a CircleCI account that is integrated to your GitHub account and a *CircleCI personal API token*. This may sound tedious, but it is actually incredibly easy to do. Review the *Detailed Prerequisites* section below for more details as needed. You will also need to have the *Docker* installed in your system.
+You will need to have an *AWS user* with *programmatic access* along with a CircleCI account that is integrated to your GitHub account and a *CircleCI personal API token*. This may sound tedious, but it is actually incredibly easy to do. Review the *Detailed Prerequisites* section below for more details as needed. You will also need to have *Docker* installed in your system.
 
 ## Environment Setup Instructions
 
