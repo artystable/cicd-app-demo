@@ -38,7 +38,7 @@ You will need to have an *AWS user* with *programmatic access* along with a Circ
   - `Settings -> Projects -> Edit -> Environment Variables -> Add Variable`
 - From the CircleCI webapp, start building the project pipeline.
   - `Add Projects -> Set Up Project -> Start Building`
-- At this point, Terraform has created your AWS S3 bucket and CircleCI is properly configured to watch for your `git push` and automatically deploy your code to the S3 bucket as is desired in a CICD pipeline. Furthermore, CircleCI has moved the contents of the remote repository to the S3 bucket and you should be able to see the demo live by logging in to AWS and accessing your S3 bucket public URL.
+- At this point, Terraform has created your AWS S3 bucket and CircleCI is properly configured to watch for your `git push` and automatically deploy your code to the S3 bucket as is desired in a CICD pipeline. Furthermore, CircleCI has moved the contents of the remote repository's `./build` directory to the S3 bucket and you should be able to see the live demo by logging in to AWS and accessing your S3 bucket public URL.
   - `AWS -> S3 -> your-custom-bucket -> Properties -> Static website hosting -> Endpoint`.
 
 ## General Details On Key Project Files & Technologies
