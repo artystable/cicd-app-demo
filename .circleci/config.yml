@@ -11,7 +11,7 @@ jobs:
       - checkout
       - aws-s3/sync:
           from: ./app/build
-          to: '${TF_VAR_S3_BUCKET_URL}'
+          to: '${S3_BUCKET_URL}'
           arguments: |
             --acl public-read \
             --cache-control "max-age=86400" \
